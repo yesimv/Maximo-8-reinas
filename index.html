@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador 8 Reinas</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            width: 400px;/*Prioriza al padre*/
+            height: 50px;/*Prioriza al hijo*/
+            border-collapse: collapse;
+            
+
+        }
+
+        tr:nth-child(even)
+        td:nth-child(even),
+        tr:nth-child(odd)
+        td:nth-child(odd)
+        {
+            background-color: #d9ae73;
+        }
+        tr:nth-child(odd)
+        td:nth-child(even),
+        tr:nth-child(even)
+        td:nth-child(odd)
+        {
+            background-color: #422b0b;
+        }
+        
+            
+        
+        
+    </style>
+    <script>
+        count=0;
+        
+        function cellclic(cell){
+        if(window.getComputedStyle(cell).backgroundImage=="none"){
+            if(count<8){
+                //se usa`` para meter texto con salto de linea y permite codigo
+            cell.style=`
+            background-image: url(./img/queen.png); 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center;`;
+            document.getElementById("count").innerHTML=`<p>Contador: ${++count}</p>`;
+            
+        
+            }
+            }else{
+            cell.style=`
+            background-image: none;`
+            document.getElementById("count").innerHTML=`<p>Contador: ${--count}</p>`;
+        }
+            
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+            
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+            
+      
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+            
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+            <td onclick="cellclic(this)"></td>
+        </tr>
+    </table>
+    <div  id="count">
+        <p>Contador:0</p>
+    </div>
+    
+</body>
+</html>
